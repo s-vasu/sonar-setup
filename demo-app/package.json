@@ -22,7 +22,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --coverage",
+    
+     "test": "jest --coverage",
+  "test:coverage": "jest --coverage",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
