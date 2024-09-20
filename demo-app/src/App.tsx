@@ -12,6 +12,7 @@ function App() {
         </Typography>
         <Button>text Button</Button>
         <Button>Button 1</Button>
+        <Button>Button 2</Button>
       </Box>
     </div>
   );
