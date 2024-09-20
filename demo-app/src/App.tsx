@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { Box, Button, Typography } from '@mui/material';
+import DividerLine from './components/atoms/DividerLine';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
           hi
         </Typography>
         <Button>text Button</Button>
+        <DividerLine />
       </Box>
     </div>
   );
