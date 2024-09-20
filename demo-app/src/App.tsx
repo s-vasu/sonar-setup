@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { Box, Typography } from '@mui/material';
+import { Box, Button, Typography } from '@mui/material';
 
 function App() {
   return (
@@ -10,6 +10,7 @@ function App() {
         <Typography>
           hi
         </Typography>
+        <Button>text Button</Button>
       </Box>
     </div>
   );
