@@ -3,6 +3,8 @@ on:
  push:
    branches:
      - main
+   paths:
+     - "demo-app/**"
  pull_request:
    types: [opened, synchronize, reopened, closed]
 jobs:
@@ -23,7 +25,7 @@ jobs:
        run: npm test src/
      - name: SonarCloud Scan
        with:
-         projectBaseDir: ./myapp   #./green-commute
+         projectBaseDir: ./demo-app   #./green-commute
        uses: SonarSource/sonarcloud-github-action@master
        env:
          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Needed to get PR information, if any
@@ -48,7 +50,7 @@ branchAnalysis: # to get the branch analysis on merge
        run: npm test src/
      - name: SonarCloud Scan
        with:
-         projectBaseDir:  ./myapp   #./green-commute
+         projectBaseDir:  ./demo-app   #./green-commute
          args: >
            -Dsonar.branch.name=main
        uses: SonarSource/sonarcloud-github-action@master
