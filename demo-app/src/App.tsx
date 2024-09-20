@@ -19,6 +19,7 @@ function App() {
         <Button>Button 3</Button>
         <DividerLine />
         <ButtonComp text="button component" />
+        <ButtonComp text="test button component" />
       </Box>
     </div>
   );
