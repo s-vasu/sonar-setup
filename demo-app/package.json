@@ -22,15 +22,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --coverage --watchAll=false",
-    "test:sonar": "jest --coverage --reporters=default --reporters=jest-sonar-reporter",
+    "test": "react-scripts test --coverage",
     "eject": "react-scripts eject"
   },
-  "jestSonar": {
-  "reportPath": "coverage",
-  "reportFile": "sonar-report.xml",
-  "indent": 4
-},
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -48,9 +42,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "jest": "^27.5.1",
-    "jest-sonar-reporter": "^2.0.0"
   }
 }
