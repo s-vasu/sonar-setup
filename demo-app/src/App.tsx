@@ -11,6 +11,7 @@ function App() {
           hi
         </Typography>
         <Button>text Button</Button>
+        <Button>Button 1</Button>
       </Box>
     </div>
   );
