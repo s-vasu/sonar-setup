@@ -3,8 +3,6 @@ on:
  push:
    branches:
      - main
-   paths:
-     - "demo-app/**"
  pull_request:
    types: [opened, synchronize, reopened, closed]
 jobs:
