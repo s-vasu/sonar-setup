@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import { Box, Button, Typography } from '@mui/material';
 import DividerLine from './components/atoms/DividerLine';
+import ButtonComp from './components/atoms/ButtonComp';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Button>Button 2</Button>
         <Button>Button 3</Button>
         <DividerLine />
+        <ButtonComp text="button component" />
       </Box>
     </div>
   );
