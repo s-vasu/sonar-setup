@@ -12,7 +12,7 @@ jobs:
    runs-on: ubuntu-latest
    defaults:
      run:
-       working-directory: ./green-commute
+       working-directory:  ./myapp       #./green-commute
    steps:
      - uses: actions/checkout@v2
        with:
@@ -23,7 +23,7 @@ jobs:
        run: npm test src/
      - name: SonarCloud Scan
        with:
-         projectBaseDir: ./green-commute
+         projectBaseDir: ./myapp   #./green-commute
        uses: SonarSource/sonarcloud-github-action@master
        env:
          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Needed to get PR information, if any
@@ -37,7 +37,7 @@ branchAnalysis: # to get the branch analysis on merge
    runs-on: ubuntu-latest
    defaults:
      run:
-       working-directory: ./green-commute
+       working-directory: ./myapp    #./green-commute
    steps:
      - uses: actions/checkout@v2
        with:
@@ -48,7 +48,7 @@ branchAnalysis: # to get the branch analysis on merge
        run: npm test src/
      - name: SonarCloud Scan
        with:
-         projectBaseDir: ./green-commute
+         projectBaseDir:  ./myapp   #./green-commute
          args: >
            -Dsonar.branch.name=main
        uses: SonarSource/sonarcloud-github-action@master
