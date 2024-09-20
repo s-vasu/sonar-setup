@@ -12,7 +12,7 @@ jobs:
    runs-on: ubuntu-latest
    defaults:
      run:
-       working-directory:  ./myapp       #./green-commute
+       working-directory:  ./sonar-setup       #./green-commute
    steps:
      - uses: actions/checkout@v2
        with:
@@ -37,7 +37,7 @@ branchAnalysis: # to get the branch analysis on merge
    runs-on: ubuntu-latest
    defaults:
      run:
-       working-directory: ./myapp    #./green-commute
+       working-directory: ./sonar-setup    #./green-commute
    steps:
      - uses: actions/checkout@v2
        with:
