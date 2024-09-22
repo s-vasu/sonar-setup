@@ -1,15 +1,23 @@
+import type { Config } from "jest";
 
- const config =  {
-  transform: {
-    ".+\\.(css|scss|png|jpg|svg|webp|gif)$": "jest-transform-stub",
-  },
+const config: Config = {
   preset: "ts-jest",
   testEnvironment: "jsdom",
-  modulePathIgnorePatterns: ["node_modules", "jest-test-results.json"],
-  setupFilesAfterEnv: ["./src/setupTests.ts"],
+  moduleNameMapper: {
+    "\\.(css|less|scss|sass)$": "identity-obj-proxy",
+  },
+  collectCoverageFrom: [
+    "**/*.{js,jsx}",
+    "!**/node_modules/**",
+    "!**/vendor/**",
+  ],
 };
 
 export default config;
+
+
+
+
 
 
 
