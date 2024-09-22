@@ -19,10 +19,8 @@ function App() {
         <Button>Button 3</Button>
         <DividerLine />
         <ButtonComp text="button component" />
-        <ButtonComp text="test button component" />
-        <ButtonComp text="test button component 1" />
-        <ButtonComp text="test button component 2" />
-        <ButtonComp text="test button component 3" />
+        <ButtonComp text="new coverage button component" />
+        
       </Box>
     </div>
   );
