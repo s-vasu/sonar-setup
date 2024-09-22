@@ -18,12 +18,13 @@ jobs:
        with:
          fetch-depth: 0 # Shallow clones should be disabled for a better relevancy of analysis
      - name: Install Dependencies
-       run: npm install --legacy-peer-deps
-       run: npm install
+       run: npm install --force
+     - name: Install updates
+       run: npm update --force
      - name: Test and coverage
-       run: npm run test:coverage
+       run: npm run test:coverage --coverageDirectory=./demo-app/coverage
      - name: List coverage directory
-       run: ls -l ./demo-app/coverage
+       run: ls -l ./coverage
      - name: SonarCloud Scan
        with:
          projectBaseDir: ./demo-app
