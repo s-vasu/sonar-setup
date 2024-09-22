@@ -1,11 +1,15 @@
-import type { Config } from "jest";
 
-const config: Config = {
+ const config =  {
+  transform: {
+    ".+\\.(css|scss|png|jpg|svg|webp|gif)$": "jest-transform-stub",
+  },
   preset: "ts-jest",
   testEnvironment: "jsdom",
-  moduleNameMapper: {
-    "\\.(css|less|scss|sass)$": "identity-obj-proxy",
-  },
+  modulePathIgnorePatterns: ["node_modules", "jest-test-results.json"],
+  setupFilesAfterEnv: ["./src/setupTests.ts"],
 };
 
 export default config;
+
+
+
