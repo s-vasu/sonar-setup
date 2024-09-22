@@ -20,7 +20,7 @@ jobs:
      - name: Install Dependencies
        run: npm install --force
      - name: Install updates
-       run: npm update
+       run: npm update --force
      - name: Test and coverage
        run: npm run test:coverage
      - name: List coverage directory
