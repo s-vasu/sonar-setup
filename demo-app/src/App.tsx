@@ -22,6 +22,7 @@ function App() {
         <ButtonComp text="test button component" />
         <ButtonComp text="test button component 1" />
         <ButtonComp text="test button component 2" />
+        <ButtonComp text="test button component 3" />
       </Box>
     </div>
   );
