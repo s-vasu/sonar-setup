@@ -26,6 +26,8 @@ jobs:
      - name: List coverage directory
        run: ls -l ./coverage
      - name: SonarCloud Scan
+       with:
+         projectBaseDir: ./demo-app
        uses: SonarSource/sonarcloud-github-action@master
        env:
          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
