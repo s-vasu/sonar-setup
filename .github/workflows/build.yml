@@ -1,34 +1,20 @@
 name: Build
 on:
- push:
-   branches:
-     - main
- pull_request:
-   types: [opened, synchronize, reopened, closed]
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [opened, synchronize, reopened]
 jobs:
- sonarcloud:
-   if: startsWith(github.head_ref, 'FE_') && github.event.pull_request.merged == false
-   name: SonarCloud
-   runs-on: ubuntu-latest
-   defaults:
-     run:
-       working-directory: ./demo-app
-   steps:
-     - uses: actions/checkout@v2
-       with:
-         fetch-depth: 0 # Shallow clones should be disabled for a better relevancy of analysis
-     - name: Install Dependencies
-       run: npm install --force
-     - name: Install updates
-       run: npm update --force
-     - name: Test and coverage
-       run: npm run test:coverage
-     - name: List coverage directory
-       run: ls -l ./coverage
-     - name: SonarCloud Scan
-       with:
-         projectBaseDir: ./demo-app
-       uses: SonarSource/sonarcloud-github-action@master
-       env:
-         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
-         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+  sonarcloud:
+    name: SonarCloud
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
