@@ -20,7 +20,6 @@ function App() {
         <DividerLine />
         <ButtonComp text="button component" />
         <ButtonComp text="test button component" />
-        <ButtonComp text="test  component" />
       </Box>
     </div>
   );
