@@ -19,8 +19,8 @@ jobs:
          fetch-depth: 0 # Shallow clones should be disabled for a better relevancy of analysis
      - name: Install Dependencies
        run: npm install --force
-     - name: Install updates
-       run: npm update --force
+    #  - name: Install updates
+    #    run: npm update --force
      - name: Test and coverage
        run: CI=true npm run test -- --coverage
      - name: check dir
