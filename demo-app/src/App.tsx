@@ -18,8 +18,6 @@ function App() {
         <Button>Button 2</Button>
         <Button>Button 3</Button>
         <DividerLine />
-        <ButtonComp text="button component" />
-        <ButtonComp text="new coverage button component" />
         
       </Box>
     </div>
