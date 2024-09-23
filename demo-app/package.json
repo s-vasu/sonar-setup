@@ -20,7 +20,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "jest --coverage",
+    "test": "jest -c jest.config.ts --passWithNoTests --coverage --verbose",
     "test:coverage": "jest --coverage",
     "eject": "react-scripts eject"
   },
