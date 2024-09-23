@@ -25,8 +25,8 @@ jobs:
        run: CI=true npm run test -- --coverage
      - name: check dir
        run: ls -l ./coverage
-     - name: check lcov
-       run: ./coverage/lcov.info
+     - name: Display lcov.info contents
+       run: cat ./coverage/lcov.info
      - name: SonarCloud Scan
        with:
          projectBaseDir: ./demo-app
