@@ -1,12 +1,11 @@
-import type { Config } from "jest";
-
-const config: Config = {
-  preset: "ts-jest",
+module.exports = {
+  collectCoverage: true,
+  collectCoverageFrom: [
+    "src/**/*.{js,jsx,ts,tsx}", // Include all source files
+    "!src/**/*.d.ts", // Exclude declaration files
+  ],
+  coverageDirectory: "coverage",
+  coverageReporters: ["lcov", "text"],
   testEnvironment: "jsdom",
-  collectCoverage:true,
-  moduleNameMapper: {
-    "\\.(css|less|scss|sass)$": "identity-obj-proxy",
-  },
+  moduleDirectories: ["node_modules", "src"],
 };
-
-export default config;
