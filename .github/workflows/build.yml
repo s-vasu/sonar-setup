@@ -23,6 +23,8 @@ jobs:
        run: npm update --force
      - name: Test and coverage
        run: CI=true npm run test -- --coverage
+     - name: check dir
+       run: ls -l
      - name: SonarCloud Scan
        with:
          projectBaseDir: ./demo-app
