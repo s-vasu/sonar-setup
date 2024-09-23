@@ -26,7 +26,7 @@ jobs:
      - name: check dir
        run: ls -l ./coverage
      - name: check lcov
-       run: ls -l ./coverage/lcov.info
+       run: ./coverage/lcov.info
      - name: SonarCloud Scan
        with:
          projectBaseDir: ./demo-app
@@ -34,4 +34,4 @@ jobs:
        env:
          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-         SONAR_VERBOSE: true
+      
