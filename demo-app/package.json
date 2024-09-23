@@ -20,8 +20,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "jest -c jest.config.ts --passWithNoTests --coverage --verbose",
-    "test:coverage": "jest --coverage",
+    "test": "react-scripts test --coverage",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

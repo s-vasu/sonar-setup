@@ -22,7 +22,7 @@ jobs:
      - name: Install updates
        run: npm update --force
      - name: Test and coverage
-       run: npm run test --coverage
+       run: npm run test
      - name: SonarCloud Scan
        with:
          projectBaseDir: ./demo-app
