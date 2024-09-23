@@ -22,7 +22,11 @@ jobs:
      - name: Install updates
        run: npm update --force
      - name: Test and coverage
-       run: npm run test
+       run: CI=true npm run test -- --coverage
+     - name: check dir
+       run: ls -l ./coverage
+     - name: Display lcov.info contents
+       run: cat ./coverage/lcov.info
      - name: SonarCloud Scan
        with:
          projectBaseDir: ./demo-app
@@ -30,3 +34,5 @@ jobs:
        env:
          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+         SONAR_VERBOSE: true 
+      
