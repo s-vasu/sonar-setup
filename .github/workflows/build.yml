@@ -22,7 +22,7 @@ jobs:
      - name: Install updates
        run: npm update --force
      - name: Test and coverage
-       run: CI=true npm run test -- --coverage
+       run: npm run test -- --coverage CI=true
      - name: check dir
        run: ls -l ./coverage
      - name: SonarCloud Scan
