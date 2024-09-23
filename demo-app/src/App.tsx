@@ -20,6 +20,7 @@ function App() {
         <DividerLine />
         <ButtonComp text="button component" />
         <ButtonComp text="new coverage button component" />
+        <ButtonComp text="new coverage button component 2" />
         
       </Box>
     </div>
