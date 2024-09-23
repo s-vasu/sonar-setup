@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { Box, Button, Typography } from '@mui/material';
 import DividerLine from './components/atoms/DividerLine';
@@ -18,7 +17,7 @@ function App() {
         <Button>Button 2</Button>
         <Button>Button 3</Button>
         <DividerLine />
-        
+        <ButtonComp text='new button' />
       </Box>
     </div>
   );
